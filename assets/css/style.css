@@ -1,0 +1,115 @@
+body {
+    background-image: url("../images/CaveQuartz.jpg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'Concert One', cursive;
+    line-height: 2.0em;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.game-header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#instructions {
+    color: #ce2f93;
+    text-align: center;
+    font-size: 28px;
+    text-shadow: 1px 2px 0 black;
+}
+
+/*number to guess*/
+#computerNumber {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 0 white;
+}
+
+#totalScore {
+    font-size: 40px;
+    text-shadow: 1px 1px 0 white;
+    text-align: center;
+}
+
+
+#flash {
+    color: #ffffff;
+    text-shadow: 3px 3px 0 black;
+    text-align: center;
+    font-size: 42px;
+}
+
+
+.status {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*wins loses*/
+#scoreboard {
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 1px 1px 0 #ce2f93;
+}
+
+.crystalImage {
+    margin: 0 95px;
+    max-width: 15%;
+    height: auto;
+
+}
+/* crystal image shakes when hovered*/
+.crystalImage:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+}
+    20%, 80% {
+    transform: translate3d(2px, 0, 0);
+}
+    30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+}
+    40%, 60% {
+    transform: translate3d(4px, 0, 0);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1260px) {
+
+.game-header img {
+    max-width: 50%;
+}
+
+
+
+}
+@media screen and (max-width: 980px) {
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+

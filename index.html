@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="UTF-8">
+    <title>Crystal Collector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" hfref="assets/css/reset.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Concert+One|Days+One" rel="stylesheet">
+
+</head>
+<body>
+<header class="game-header">
+    <img src="assets/images/title.png">
+</header><!-- /.game-header -->
+    <div class="wrapper">
+        <div id="instructions">
+            <p>Find and collect the crystals!<br>
+            Each crystal below has a specific value.<br>
+             Match the total value of your crystal collection to the value shown on screen without going over and you win!<br>
+             If you go over the value, you lose.</p>
+         </div>
+
+
+        <div id="computerNumber">
+            <p>Number to guess: <span class="value"></span></p>
+        </div>
+        <div id ="totalScore">
+            <p id = "yts">Your total score is: <span id ="yourScore">0</span></p>
+        </div>
+    </div>
+        <div id="scoreboard">
+            <h2>Wins: <span id="win"></span>&nbsp;&nbsp;&nbsp;Losses: <span id="loss"></span></h2>
+        </div>
+
+    <div>
+        <div id= "crystals"></div>
+    </div>
+    </div>
+<h2 id="flash"><div class="status"></div></h2>
+
+
+</body>
+<!-- adding jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</script>
+
+</body>
+</html>
