@@ -5,27 +5,26 @@ crystals = ['assets/images/crystal1.png','assets/images/crystal2.png','assets/im
 var counter = 0;
 var wins = 0;
 var losses = 0;
-//functions to run when opened in browser.
+
 crystalValue();
 newGame();
-
 
 
 function crystalValue() {
 
   var numbers = []
-  //set a random value to each crystal in array (4), with a math ceiling of 12.  (1-12)
+  //set a random value to each crystal in array (4), with a math value ceiling of 12.  (1-12)
     while(numbers.length < 4){
-      var randomnumber = Math.ceil(Math.random()*12)
+      var randomNumber = Math.ceil(Math.random()*12)
 //going thru numbers array, when a random number is generated, and is in array, break out of function and console log.
 //if number is not found, generate a random number.
       var numFound = false;
       for (var i=0; i< numbers.length; i++){
-      if (numbers[i] == randomnumber){
+      if (numbers[i] == randomNumber){
       numFound = true; break
       }
       }
-      if(!numFound)numbers[numbers.length]=randomnumber;
+      if(!numFound)numbers[numbers.length]=randomNumber;
     }
   console.log(numbers);
 //for each item in array, add the following in a div:
@@ -34,33 +33,32 @@ function crystalValue() {
       var imageCrystal = $('<img>');
       imageCrystal.attr('data-num', numbers[i]);
       imageCrystal.attr('src', crystals[i]);
-      imageCrystal.attr('alt', 'crystals');
       imageCrystal.addClass('crystalImage')
       $('#crystals').append(imageCrystal);
       }
 }
 
 
-//Your total score in html gets set to counter, at this point it is zero.
+//user score in html gets set to counter, at this point it is zero.
 function newGame() {
   counter = 0;
-  $('#yourScore').text(counter);
-  function randomIntFromInterval(min,max){
+  $('#userScore').text(counter);
+  function randomCompInt(min,max){
 // a random number generates with a value with a min max
   return Math.floor(Math.random()*(max-min+1)+min);
 }
 //targetNumber is the desired range for random number between 19-120
-    var targetNumber = randomIntFromInterval(19,120);
+    var targetNumber = randomCompInt(19,120);
     $('.value').text(targetNumber);
 //The crystal images, when clicked will total and parse (add together) the total number of clicks by its random number value
 //total then gets set in counter.
     $('.crystalImage').on('click', function(){
     counter = counter + parseInt($(this).data('num'));
-//it is then changed in Your total score on DOM 'yourScore'
-    $('#yourScore').text(counter);
+//user score is updated, music plays
+    $('#userScore').text(counter);
     var audio = new Audio("assets/audio/cashregister.mp3");
     audio.play();
-//if counter is equal to targetNumber, You win pops up in html status,
+//if counter is equal to targetNumber, You win pops up in html, music plays
 //wins go up by 1
 //crystalValue function runs, game resets crystal values and attributes
 //newGame function runs, counter goes to 0, new number is generated, and crystal values are added when clicked.
@@ -74,7 +72,7 @@ function newGame() {
     $('#crystals').empty();
     crystalValue();
     newGame();
-//if counter is over targetNumber, You lose pops up in html status,
+//if counter is over targetNumber, You lose pops up in html, music plays
 //losses goes up by 1
 //crystalValue function runs, game resets crystal values and attributes
 //newGame function runs, counter goes to 0, new number is generated, and crystal values are added when clicked.

@@ -16,13 +16,17 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-#instructions {
+.instructions p {
     color: #ce2f93;
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
     text-shadow: 1px 2px 0 black;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 40px;
 }
 
 /*number to guess*/
@@ -30,14 +34,31 @@ body {
     text-align: center;
     font-size: 40px;
     text-shadow: 1px 1px 0 white;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 30px;
 }
 
 #totalScore {
     font-size: 40px;
     text-shadow: 1px 1px 0 white;
     text-align: center;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 30px;
 }
 
+
+@media only screen and (max-width: 720px) {
+
+.instructions p {
+    font-size: 18px;
+}
+
+#computerNumber,
+#totalScore {
+    font-size: 30px;
+}
+
+}
 
 #flash {
     color: #ffffff;
@@ -50,22 +71,112 @@ body {
 .status {
     text-align: center;
     margin-bottom: 10px;
+    font-family: 'Concert One', cursive;
 }
 
 /*wins loses*/
 #scoreboard {
     margin-bottom: 6px;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: 1px 1px 0 #ce2f93;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 50px;
 }
 
-.crystalImage {
-    margin: 0 95px;
-    max-width: 15%;
+#crystals img  {
+    margin: 0 120px;
+    width: 160px;
     height: auto;
+    margin-bottom: 30px;
+}
+
+/*@media only screen and (max-width: 1587px) {
+
+.instructions p {
+    font-size: 28px;
+}
+
+#crystals img {
+    margin: 0 100px;
+    width: 150px;
+}
+}*/
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+
+
+#crystals img {
+    margin: 0 90px;
+    width: 110px;
+}
+}
+
+@media only screen and (min-width: 578px) and (max-width: 1024px) {
+
+#crystals img {
+    margin: 0 50px;
+    width: 100px;
+}
+
+.game-header img {
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#computerNumber,
+#totalScore {
+    margin-bottom: 10px;
+}
+
+#scoreboard {
+    margin-bottom: 20px;
+}
 
 }
+
+
+@media only screen and (max-width: 577px) {
+
+body {
+    overflow-y: visible;
+}
+
+#crystals img {
+    margin: 50px;
+    width: 95px;
+    margin-bottom: 0;
+}
+
+.game-header img {
+    margin-bottom: 5px;
+}
+
+.instructions p {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+#computerNumber,
+#totalScore {
+    margin-bottom: 5px;
+}
+
+#scoreboard {
+    margin-bottom: 5px;
+}
+
+#flash {
+    font-size: 24px;
+}
+}
+
+
+
+
+
 /* crystal image shakes when hovered*/
 .crystalImage:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -93,23 +204,9 @@ body {
 
 
 
-@media screen and (max-width: 1260px) {
-
-.game-header img {
-    max-width: 50%;
-}
 
 
 
-}
-@media screen and (max-width: 980px) {
-
-
-}
-
-@media screen and (max-width: 768px) {
-
-}
 
 
 
