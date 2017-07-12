@@ -16,8 +16,6 @@ function crystalValue() {
   //set a random value to each crystal in array (4), with a math value ceiling of 12.  (1-12)
     while(numbers.length < 4){
       var randomNumber = Math.ceil(Math.random()*12)
-//going thru numbers array, when a random number is generated, and is in array, break out of function and console log.
-//if number is not found, generate a random number.
       var numFound = false;
       for (var i=0; i< numbers.length; i++){
       if (numbers[i] == randomNumber){
